@@ -35,7 +35,7 @@ body {
 }
 
 .slideshow-container {
-    max-width: 600px;
+    max-width: auto;
     position: relative;
     margin: auto;
   }
@@ -75,7 +75,7 @@ body {
 
 .header {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     background: rgb(193, 207, 230);
     position: relative;
     flex: 1;
@@ -140,7 +140,7 @@ ul li a:hover {
 }
 
 .content {
-    padding: 10px;
+    padding: auto;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -206,7 +206,7 @@ input select {
 }
 
 .footer1 {
-    justify-content: left;
+    justify-content: center;
     text-align: left;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -222,7 +222,7 @@ input select {
 }
 
 .footer2 {
-    padding: 30px;
+    padding: auto;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -254,7 +254,7 @@ input select {
 }
 
 .package1 {
-    padding: 10px;
+    padding: auto;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -270,7 +270,7 @@ input select {
 }
 
 .package2 {
-    padding: 10px;
+    padding: auto;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -286,7 +286,7 @@ input select {
 }
 
 .package3 {
-    padding: 10px;
+    padding: auto;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -302,7 +302,7 @@ input select {
 }
 
 .package4 {
-    padding: 10px;
+    padding: auto;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -318,7 +318,7 @@ input select {
 }
 
 .package5 {
-    padding: 10px;
+    padding: auto;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -334,7 +334,7 @@ input select {
 }
 
 .package6 {
-    padding: 10px;
+    padding: auto;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -350,7 +350,7 @@ input select {
 }
 
 .closing {
-    padding: 10px;
+    padding: auto;
     justify-content: center;
     text-align: center;
     align-items: center;
