@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -49,22 +50,23 @@
             </div>
             <div class="sidebar">
                 <form action="#" class="form">
-                        <h1 id="Contact">Contact Us!</h1>
-                        <hr>
+                    <h1 id="Contact">Contact Us!</h1>
+                    <hr>
                     <div class="input-box">
                         <label>Your Name:</label>
                         <input id="name" placeholder="Enter Your Name" />
-                        <label>Email:<Address></Address></label>
+                        <label>Email:</label>
                         <input id="email" placeholder="someone@mail.com" />
                         <label>What are you interested in?</label>
-                        <select>
+                        <select id="interest">
                             <option value="select">-- please select --</option>
                             <option value="vacation">Vacation Package</option> 
                             <option value="pricing">Pricing</option>
                             <option value="information">Information</option>
                         </select>
-                        <button onclick="validate()"
-                        type="send">Send</button>
+                        <!-- Calling the validateForm() function on button click -->
+                        <button type="button" onclick="validateForm()">Send</button>
+                    </div>
                 </form>
              </div>
         </div>
