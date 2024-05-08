@@ -1,29 +1,3 @@
-// script.js
-
-// Function to generate a random color
-function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
-
-// Function to change text color in .opening div
-function changeTextColor() {
-    var openingDiv = document.querySelector('.opening');
-    var elements = openingDiv.querySelectorAll('h1, p, b, i');
-    elements.forEach(function(element) {
-        element.style.color = getRandomColor();
-    });
-}
-
-// Call the changeTextColor function when the DOM content is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    changeTextColor();
-});
-
 function initBannerSlider() {
     var openingDiv = document.querySelector('.opening');
     var titles = ['Fun and Safe is our motto', 'Explore New Destinations', 'Experience Adventure', 'Enjoy Your Vacation'];
@@ -88,7 +62,7 @@ function validateForm() {
         return false;
     }
 
-    alert("Form is valid. Submitting...");
+    alert("Thank You for your attention, we will submit your form");
     
 }
 
