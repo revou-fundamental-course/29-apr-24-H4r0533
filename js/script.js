@@ -1,46 +1,63 @@
-// Function to initialize the auto-slide banner
+// script.js
+
+// Function to generate a random color
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+// Function to change text color in .opening div
+function changeTextColor() {
+    var openingDiv = document.querySelector('.opening');
+    var elements = openingDiv.querySelectorAll('h1, p, b, i');
+    elements.forEach(function(element) {
+        element.style.color = getRandomColor();
+    });
+}
+
+// Call the changeTextColor function when the DOM content is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    changeTextColor();
+});
+
 function initBannerSlider() {
     var openingDiv = document.querySelector('.opening');
-    var titles = ['HAROSI TRAVEL', 'Explore New Destinations', 'Experience Adventure', 'Enjoy Your Vacation']; // Array of titles
+    var titles = ['Fun and Safe is our motto', 'Explore New Destinations', 'Experience Adventure', 'Enjoy Your Vacation'];
     var currentIndex = 0;
     var intervalId;
 
-    // Function to change the title
     function changeTitle() {
         openingDiv.innerHTML = `
-            <h1><b>${titles[currentIndex]}</b></h1>
-            <p><i>Fun and Safe is our motto</i></p>
+            <h1><b>HAROSI TRAVEL</b></h1>
+            <p><i>${titles[currentIndex]}</i></p>
         `;
-        currentIndex = (currentIndex + 1) % titles.length; // Move to the next title or loop back to the beginning
+        currentIndex = (currentIndex + 1) % titles.length; 
     }
 
-    // Start the auto-slide interval
     function startAutoSlide() {
-        intervalId = setInterval(changeTitle, 3000); // Change title every 3 seconds
+        intervalId = setInterval(changeTitle, 1000);
     }
 
-    // Stop the auto-slide interval
     function stopAutoSlide() {
         clearInterval(intervalId);
     }
 
-    // Start auto-slide when the page loads
     startAutoSlide();
 
-    // Pause auto-slide when mouse enters the banner area
     openingDiv.addEventListener('mouseenter', stopAutoSlide);
 
-    // Resume auto-slide when mouse leaves the banner area
     openingDiv.addEventListener('mouseleave', startAutoSlide);
 }
 
-// Call the initBannerSlider function when the DOM content is loaded
 document.addEventListener('DOMContentLoaded', function() {
     initBannerSlider();
 });
 
 
-// Call the initBannerSlider function when the DOM content is loaded
 document.addEventListener('DOMContentLoaded', function() {
     initBannerSlider();
 });
@@ -71,12 +88,10 @@ function validateForm() {
         return false;
     }
 
-    // If all validation passes, you can submit the form or perform further actions
     alert("Form is valid. Submitting...");
-    // document.getElementById("form").submit();
+    
 }
 
-// Function to check if email is valid using regex
 function isValidEmail(email) {
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
